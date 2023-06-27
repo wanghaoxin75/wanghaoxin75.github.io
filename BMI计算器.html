@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BMI计算器</title>
+  <script>
+    function calculateBMI() {
+      var weight = parseFloat(document.getElementById("weight").value);
+      var height = parseFloat(document.getElementById("height").value);
+      
+      var bmi = weight / (height * height);
+      var interpretation = "";
+      
+      if (bmi < 18.5) {
+        interpretation = "偏瘦";
+      } else if (bmi < 24.9) {
+        interpretation = "正常";
+      } else if (bmi < 29.9) {
+        interpretation = "超重";
+      } else {
+        interpretation = "肥胖";
+      }
+      
+      document.getElementById("result").innerHTML = "您的BMI指数为：" + bmi.toFixed(2);
+      document.getElementById("interpretation").innerHTML = "您的体重状况为：" + interpretation;
+    }
+  </script>
+</head>
+<body style="text-align: center">
+  <h1 style="text-align: center">BMI计算器</h1>
+  
+  <label for="weight">体重（千克）：</label>
+  <input type="text" id="weight"><br>
+  
+  <label for="height">身高（米）：</label>
+  <input type="text" id="height"><br>
+  
+  <button onclick="calculateBMI()">计算BMI</button><br>
+  
+  <div id="result"></div>
+  <div id="interpretation"></div>
+</body>
+</html>

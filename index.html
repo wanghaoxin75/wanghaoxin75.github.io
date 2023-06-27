@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>期末大作业</title>
+  <style>
+/* 背景 */
+body {
+  background-image: url("./图片.jpg" );
+  background-repeat: no-repeat;
+  background-size: cover; 
+  background-repeat: repeat; /*设置背景平铺*/
+}
+/* 旋转图片 */
+.rotate-container {
+  display: flex;
+  justify-content: center;
+  /* align-items: center; */
+  height: 48vh; /* 使用视口高度设置容器高度 */
+}
+
+.rotate-image {
+  animation: rotation 12s linear infinite; /* 设置旋转动画 */
+}
+
+.round-image {
+  width: 190px; /* 指定图片尺寸 */
+  height: 190px;
+  border-radius: 50%; /* 将边框半径设为50% */
+  object-fit: cover; /* 保持比例裁剪 */
+  margin-top: 50px; /* 上间距 */
+  margin-bottom: 85px; /* 下间距 */
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
+
+/* 字体 */
+
+.title-box {
+  /* background-color: #f2f2f2; */
+  padding: 30px;
+  text-align: center;
+  position: absolute; /* 设置为相对定位 */
+  top: 180px; /* 将框的顶部向下移动100px */
+  left: 50%; /* 将框的左边缘设置为页面50%的宽度，即居中 */
+  transform: translateX(-50%); /* 将框水平居中 */
+}
+
+.title-box h2 {
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.title-box p {
+  font-size: 24px;
+}
+/* h1的字体设置 */
+h1 {
+  color: #195ec499; /* 设置字体颜色为白色 */
+}
+h1 {
+  font-family: Georgia, serif; /* 设置字体为Georgia */
+}
+h1 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold; /* 设置标题为粗体 */
+  font-size: 54px; /* 设置标题大小为24像素 */
+}
+/* h3的字体设置 */
+h3 {
+  color: #1b4686bb; /* 设置字体颜色为白色 */
+}
+h3 {
+  font-family: Georgia, serif; /* 设置字体为Georgia */
+}
+h3 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold; /* 设置标题为粗体 */
+  font-size: 30px; /* 设置标题大小为24像素 */
+}
+/* 盒子 */
+.container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+  flex-wrap: wrap;
+  gap: 10px; /* 设置盒子间距 */
+}
+
+.box {
+  width: 180px;
+  height: 100px;
+  background-color: rgba(255, 255, 255, 0.333); /* 设置背景半透明 */
+  border-radius: 20px;
+  box-shadow: 2px 2px 5px rgba(0,0,0,.2);
+  margin: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 10px; /* 调整内边距 */
+}
+
+.box p {
+  margin: 0; /* 清除段落默认外边距 */
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.box:first-child {
+  border-radius: 20px 20px 20px 20px;
+}
+
+.box:last-child {
+  border-radius: 20px 20px 20px 20px;
+}
+  </style>
+</head>
+  <!-- 旋转图片 -->
+  <div class="rotate-container">
+    <img src="./图片1.jpg" alt="旋转图片" class="rotate-image round-image">
+  </div>
+  <!-- 字体 -->
+ <div class="title-box">
+    <h1><a href="./个人介绍.html" target="_blank">自我介绍</a></h1>
+    <p><h2>我的工具</h2></p>
+  </div>
+  <div class="container">
+    <div class="box">
+      <p><a href="./比大小.html" target="_blank"><h3>数字比大小</h3></a></p>
+    </div>
+    <div class="box">
+      <p><a href="https://home.cnblogs.com/u/1668zhou" target="_self"><h3>我的博客</h3></a></p>
+    </div>
+    <div class="box">
+      <p><a href="./计算圆的周长面积.html"target="_blank"><h3>计算圆的周长面积</h3></a></p>
+    </div>
+  </div>
+  <div class="container">
+    <div class="box">
+      <p><a href="./斐波那契数列计算.html" target="_blank"><h3>斐波那契数列计算</h3></a></p>
+    </div>
+    <div class="box">
+      <p><a href="./BMI计算器.html " target="_blank"><h3>BMI计算器</h3></a></p>
+    </div>
+    <div class="box">
+      <p><a href="./猜字游戏十个数.html" target="_blank"><h3>猜字幸运数字</h3></a></p>
+    </div>
+
+
+    
+  </div>
+</body>
+</html>

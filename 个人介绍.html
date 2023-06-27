@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>自我介绍</title>
+	<style>
+		body {
+			background-image: url('./图片.jpg');
+			background-size: cover;
+			background-position: center;
+			color: #ffffffcb;
+			font-family: Arial, sans-serif;
+			font-size: 20px;
+			margin: 0;
+			padding: 0;
+		}
+
+		header {
+			background-color: rgba(0, 0, 0, 0);
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			height: 373px;
+			position: relative;
+		} 
+		h1 {
+			font-size: 48px;
+			margin: 0;
+			text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.351);
+		}
+
+		h2 {
+			font-size: 36px;
+			margin: 0;
+			text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.386);
+		}
+
+		.container {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-around;
+			padding: 20px;
+		}
+
+		.card {
+			background-color: rgba(255, 255, 255, 0.333);
+			box-shadow: 4px 2px 4px rgba(0, 0, 0, 0.3);
+			margin: 20px;
+			padding: 20px;
+			width: 350px;
+			height: 350px;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			text-align: center;
+			transition: transform 1s ease-in-out;
+		}
+
+		.card:hover {
+			transform: scale(1.05);
+		}
+
+		.card h3 {
+			font-size: 24px;
+			margin: 0;
+            color: #0d0d0d;
+		}
+
+		.card p {
+			font-size: 16px;
+			margin: 0;
+            color: #050505;
+		}
+
+		.card img {
+	width: 200px;
+	height: 220px;
+	border-radius: 50%;
+	margin-bottom: 20px;
+		}
+
+		.message-board {
+			background-color: rgba(0, 0, 0, 0.333);
+			box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+			margin: 20px;
+			padding: 20px;
+			width: 350px;
+			height: 350px;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			text-align: center;
+			transition: transform 0.2s ease-in-out;
+		}
+
+		.message-board:hover {
+			transform: scale(1.05);
+		}
+
+		.message-board h3 {
+			font-size: 24px;
+			margin: 0;
+            color: #141516;
+		}
+
+		.message-board form {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			margin-top: 10px;
+		}
+
+		.message-board input[type="text"], .message-board textarea {
+			padding: 10px;
+			margin: 10px 0;
+			border-radius: 5px;
+			border: none;
+			width: 50%;
+		}
+
+		.message-board input[type="submit"] {
+			background-color: #4CAF50;
+			color: #fff;
+			padding: 10px;
+			border: none;
+			border-radius: 5px;
+			cursor: pointer;
+			width: 50%;
+			transition: background-color 0.3s ease-in-out;
+		}
+
+		.message-board input[type="submit"]:hover {
+			background-color: #3e8e41;
+		}
+        .rotate-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50vh; /* 使用视口高度设置容器高度 */
+}
+.rotate-image {
+  animation: rotation 5s linear infinite; /* 设置旋转动画 */
+}
+.round-image {
+  width: 220px; /* 指定图片尺寸 */
+  height: 220px;
+  border-radius: 75%; /* 将边框半径设为50% */
+  object-fit: cover; /* 保持比例裁剪 */
+  margin-top: 30px; /* 上间距 */
+  margin-bottom: 10px; /* 下间距 */
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(359deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}
+	</style>
+</head>
+<body>
+	<header>
+		<h1><a href="index.html">自我介绍</a></h1>
+		<h2>MY NAME IS 王浩鑫</h2>
+		<diy class="rotate-container">
+            <img src="./图片1.jpg" alt="我的照片" class="rotate-image round-image">
+        </diy>
+		
+	</header>
+	<div class="container">
+		<div class="card">
+			<img src="./图片2.jpg" alt="图片1">
+			<h3>个人经历</h3>
+			<p>我是一名大学生，我喜欢软件编程和软件开发</p>
+		</div>
+		<div class="card">
+			<img src="图片3.jpg" alt="图片3">
+			<h3>兴趣爱好</h3>
+			<p>我喜欢打篮球、看书和玩游戏，这些让我的空闲时间充满了意义</p>
+		</div>
+		<div class="message-board">
+			<h3>留言板</h3>
+			<form>
+				<input type="text" placeholder="姓名">
+				<input type="text" placeholder="留言"><input type="text" placeholder="邮箱">
+				<p></p>
+				
+<input type="submit" value="提交">
+			</form>
+		</div>
+	</div>
+</body>
+</html>
